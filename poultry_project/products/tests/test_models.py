@@ -7,7 +7,7 @@ from .. models import Product
 from . factories import ProductFactory
 
 def test___str__():
-    product = ProductFactory(product_name = "goose")
-    
-    assert product.__str__() == "goose"
-    assert str(product) == "goose"
+    product = ProductFactory()
+
+    assert product.__str__() == product.product_name
+    assert str(product) == product.product_name
