@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from . models import Product
 
 from django.views.generic import(
@@ -8,7 +9,7 @@ from django.views.generic import(
     ListView,
 )
 
-class CreateProductView(CreateView):
+class CreateProductView(LoginRequiredMixin, CreateView):
     model = Product
     fields = ["product_id", "product_name", "description", "unit_of_measure","unit_price", ]
 
