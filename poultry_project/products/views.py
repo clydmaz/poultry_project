@@ -1,3 +1,5 @@
+from . models import Product
+
 from django.views.generic import(
     CreateView,
     DeleteView,
@@ -5,8 +7,6 @@ from django.views.generic import(
     UpdateView,
     ListView,
 )
-
-from . models import Product
 
 class CreateProductView(CreateView):
     model = Product
