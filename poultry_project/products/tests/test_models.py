@@ -4,6 +4,8 @@ pytestmark = pytest.mark.django_db
 
 from .. models import Product
 
+
+
 def test___str__():
     product = Product.objects.create(
         product_id = "cpl0001",
