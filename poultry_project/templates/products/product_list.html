@@ -4,7 +4,15 @@
     <h2>Products List</h2>
     <ul>
         {% for product in product_list %}
-            <li><a href="{% url 'product:details' product.slug %}">{{ product.name }}</a></li>
+            <li><a href="{% url 'products:detail' product.slug %}">{{ product.product_name }}</a></li>
         {% endfor %}
     </ul>
+    <hr/>
+    <p>Dont see the product here? </p>
+    <p>
+        <a class="btn btn-primary"
+        href="{% url 'products:add' %}" role="button">
+        Add Product
+        </a>
+    </p>
 {% endblock content %}

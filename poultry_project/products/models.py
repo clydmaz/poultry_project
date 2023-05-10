@@ -17,5 +17,5 @@ class Product(TimeStampedModel):
         return self.product_name
     
     def get_absolute_url(self):
-        return reverse("products:details", kwargs={"slug": self.slug})
+        return reverse("products:detail", kwargs={"slug": self.slug})
     
