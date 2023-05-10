@@ -9,6 +9,7 @@ from poultry_project.products.views import (
 )
 
 app_name = "products"
+
 urlpatterns = [
     path("add/", view=product_add_view, name="add"),
     path("list/", view=product_list_view, name="list"),
