@@ -9,5 +9,13 @@
     <p>{{product.quantity_in_stock }}</p>
     <p> {{product.unit_price}}</p>
     <p>{{product.unit_of_measure}}</p>
-    
+    <hr/>
+    <h3>Submitted by:
+        <a href = "{% url 'users:detail' product.creator.username %}">
+            {{product.creator.username}}
+        </a>
+    </h3>
+    {% if product.creator.username %}
+    <p>{{product.creator.username}}</p>
+    {% endif %}
 {%endblock content%}
