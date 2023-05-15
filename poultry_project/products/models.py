@@ -11,7 +11,7 @@ class Product(TimeStampedModel):
     unit_price = models.FloatField("Unit Price Dollars")
     quantity_in_stock = models.IntegerField("Units In Stock",default=0)
     unit_of_measure = models.CharField("Unit Of Measurement", max_length=4)
-    slug = AutoSlugField("product_address", unique=True, always_update = False, populate_from="product_id")
+    slug = AutoSlugField("product_address", unique=True, always_update = False, populate_from="product_name")
     creator = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         null=True,
