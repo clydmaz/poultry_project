@@ -5,8 +5,8 @@ from model_utils.models import TimeStampedModel
 from autoslug import AutoSlugField
 
 class Product(TimeStampedModel):
-    product_id = models.CharField("Product Id", max_length=250)
-    product_name = models.CharField("The Name Of The Poultry Product", max_length=250)
+    product_id = models.CharField("Product Id", max_length=250, primary_key=True)
+    product_name = models.CharField("The Name Of The Poultry Product", max_length=250, unique=True)
     description = models.TextField("Product Description")
     unit_price = models.FloatField("Unit Price Dollars")
     quantity_in_stock = models.IntegerField("Units In Stock",default=0)

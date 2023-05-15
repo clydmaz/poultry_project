@@ -25,6 +25,7 @@ def test_add_resolve():
 
 def detail_reverse(product):
     """products:detail must reverse to /products/details/productslug/."""
+    print(f'THE PRODUCT SLUG SHOULD BE THIS {product.slug}')
     url = reverse('products:detail',
                   kwargs={'slug':product.slug}
                   )
